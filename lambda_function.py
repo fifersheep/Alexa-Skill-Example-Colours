@@ -1,12 +1,3 @@
-"""
-This sample demonstrates a simple skill built with the Amazon Alexa Skills Kit.
-The Intent Schema, Custom Slots, and Sample Utterances for this skill, as well
-as testing instructions are located at http://amzn.to/1LzFrj6
-
-For additional samples, visit the Alexa Skills Kit Getting Started guide at
-http://amzn.to/1LGWsLG
-"""
-
 from __future__ import print_function
 
 
@@ -50,8 +41,7 @@ def get_welcome_response():
 
     session_attributes = {}
     card_title = "Welcome"
-    speech_output = "Welcome to the Alexa Skills Kit sample. " \
-                    "Please tell me your favorite color by saying, " \
+    speech_output = "Please tell me your favorite color by saying, " \
                     "my favorite color is red"
     # If the user either does not reply to the welcome message or says something
     # that is not understood, they will be prompted again with this text.
@@ -77,9 +67,7 @@ def create_favorite_color_attributes(favorite_color):
 
 
 def set_color_in_session(intent, session):
-    """ Sets the color in the session and prepares the speech to reply to the
-    user.
-    """
+    """ Sets the color in the session and prepares the speech to reply to the user. """
 
     card_title = intent['name']
     session_attributes = {}
